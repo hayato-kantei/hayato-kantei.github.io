@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="robots"
+    content="noindex, nofollow, noarchive"
+  >
+
+  <title>良子さん｜本鑑定書｜ハヤト</title>
+
+  <style>
+    :root {
+      --background-dark: #070910;
+      --background-middle: #111522;
+      --wine: #6f1734;
+      --gold: #c9aa6a;
+      --gold-light: #e1c58d;
+      --text-main: #eeeae2;
+      --text-soft: #cbc5ba;
+      --text-muted: #928c82;
+      --border: rgba(201, 170, 106, 0.24);
+      --card: rgba(15, 18, 29, 0.82);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+      color: var(--text-main);
+      font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+      background:
+        radial-gradient(
+          circle at 12% 8%,
+          rgba(111, 23, 52, 0.34),
+          transparent 29%
+        ),
+        radial-gradient(
+          circle at 88% 18%,
+          rgba(201, 170, 106, 0.11),
+          transparent 24%
+        ),
+        radial-gradient(
+          circle at 50% 78%,
+          rgba(83, 15, 39, 0.24),
+          transparent 34%
+        ),
+        linear-gradient(
+          180deg,
+          var(--background-dark) 0%,
+          var(--background-middle) 48%,
+          #080a10 100%
+        );
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(
+          circle at 22% 28%,
+          rgba(255, 239, 204, 0.06),
+          transparent 16%
+        ),
+        radial-gradient(
+          circle at 78% 38%,
+          rgba(255, 232, 187, 0.05),
+          transparent 15%
+        ),
+        radial-gradient(
+          circle at 48% 70%,
+          rgba(255, 255, 255, 0.03),
+          transparent 21%
+        );
+      filter: blur(18px);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image:
+        radial-gradient(
+          circle,
+          rgba(225, 197, 141, 0.9) 0.7px,
+          transparent 1.1px
+        ),
+        radial-gradient(
+          circle,
+          rgba(201, 170, 106, 0.6) 0.6px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle,
+          rgba(255, 242, 211, 0.48) 0.5px,
+          transparent 0.9px
+        );
+      background-size:
+        180px 180px,
+        250px 250px,
+        330px 330px;
+      background-position:
+        20px 35px,
+        110px 150px,
+        60px 90px;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(100% - 32px, 780px);
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .cover {
+      padding: 52px 28px 46px;
+      margin-bottom: 24px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.045),
+          rgba(255, 255, 255, 0.015)
+        );
+      box-shadow:
+        0 22px 70px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(5px);
+    }
+
+    .cover-brand {
+      margin-bottom: 15px;
+      color: var(--gold);
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+    }
+
+    .cover h1 {
+      margin: 0;
+      font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+      font-size: clamp(27px, 5vw, 36px);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.12em;
+    }
+
+    .cover-line {
+      width: 58px;
+      height: 1px;
+      margin: 25px auto 20px;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+    }
+
+    .cover-subtitle {
+      margin: 0;
+      color: var(--text-soft);
+      font-size: 14px;
+      line-height: 1.8;
+      letter-spacing: 0.08em;
+    }
+
+    .reading {
+      padding: 42px 42px 48px;
+      border: 1px solid rgba(201, 170, 106, 0.18);
+      border-radius: 20px;
+      background: var(--card);
+      box-shadow:
+        0 22px 70px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+      backdrop-filter: blur(5px);
+    }
+
+    .reading p {
+      margin: 0 0 1em;
+      color: var(--text-main);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.95;
+      letter-spacing: 0.025em;
+    }
+
+    .reading p:last-child {
+      margin-bottom: 0;
+    }
+
+    .recipient {
+      margin-bottom: 1.15em !important;
+      color: var(--gold-light) !important;
+      font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+      font-size: 21px !important;
+      letter-spacing: 0.08em !important;
+    }
+
+    .lead {
+      color: #f4f0e8 !important;
+    }
+
+    .key-message {
+      margin: 1.45em 0 !important;
+      padding: 17px 19px;
+      color: #f5eee3 !important;
+      font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+      font-size: 17px !important;
+      font-weight: 600 !important;
+      line-height: 1.9 !important;
+      border-left: 2px solid var(--gold);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(111, 23, 52, 0.27),
+          rgba(201, 170, 106, 0.045)
+        );
+    }
+
+    .rhythm {
+      margin: 1.15em 0 !important;
+      padding-left: 15px;
+      color: #e5ded2 !important;
+      border-left: 1px solid rgba(201, 170, 106, 0.48);
+    }
+
+    .rhythm span {
+      display: block;
+      margin-bottom: 0.28em;
+    }
+
+    .rhythm span:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-break {
+      width: 76px;
+      height: 1px;
+      margin: 31px auto;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(201, 170, 106, 0.65),
+          transparent
+        );
+    }
+
+    .bracelet-block {
+      margin: 1.6em 0;
+      padding: 24px 22px;
+      border: 1px solid rgba(201, 170, 106, 0.24);
+      border-radius: 12px;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(111, 23, 52, 0.22),
+          transparent 42%
+        ),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .bracelet-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cta {
+      margin: 1.6em 0 !important;
+      padding: 19px 20px;
+      color: #f2ece2 !important;
+      text-align: center;
+      border: 1px solid rgba(201, 170, 106, 0.42);
+      border-radius: 10px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(111, 23, 52, 0.38),
+          rgba(201, 170, 106, 0.08)
+        );
+    }
+
+    .signature {
+      margin-top: 2em !important;
+      color: var(--gold-light) !important;
+      font-family:
+        Georgia,
+        "Yu Mincho",
+        serif;
+      font-size: 20px !important;
+      text-align: right;
+      letter-spacing: 0.12em !important;
+    }
+
+    .page-footer {
+      padding-top: 28px;
+      color: var(--text-muted);
+      font-size: 11px;
+      text-align: center;
+      letter-spacing: 0.16em;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .page {
+        width: min(100% - 22px, 780px);
+        padding: 22px 0 44px;
+      }
+
+      .cover {
+        padding: 39px 18px 35px;
+        margin-bottom: 14px;
+        border-radius: 15px;
+      }
+
+      .cover-brand {
+        font-size: 10px;
+        letter-spacing: 0.24em;
+      }
+
+      .cover-subtitle {
+        font-size: 12px;
+      }
+
+      .reading {
+        padding: 28px 20px 34px;
+        border-radius: 15px;
+      }
+
+      .reading p {
+        margin-bottom: 0.9em;
+        font-size: 15px;
+        line-height: 1.9;
+        letter-spacing: 0.015em;
+      }
+
+      .recipient {
+        font-size: 19px !important;
+      }
+
+      .key-message {
+        margin: 1.3em 0 !important;
+        padding: 15px 15px;
+        font-size: 16px !important;
+        line-height: 1.85 !important;
+      }
+
+      .rhythm {
+        padding-left: 12px;
+      }
+
+      .section-break {
+        margin: 26px auto;
+      }
+
+      .bracelet-block {
+        margin: 1.35em 0;
+        padding: 19px 16px;
+      }
+
+      .cta {
+        padding: 16px 14px;
+      }
+    }
+
+    @media print {
+      body {
+        color: #111;
+        background: #fff;
+      }
+
+      body::before,
+      body::after {
+        display: none;
+      }
+
+      .page {
+        width: 100%;
+        padding: 0;
+      }
+
+      .cover,
+      .reading {
+        color: #111;
+        border: none;
+        background: #fff;
+        box-shadow: none;
+      }
+
+      .reading p,
+      .lead,
+      .key-message,
+      .rhythm,
+      .cta,
+      .signature {
+        color: #111 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="cover">
+      <div class="cover-brand">HAYATO PRIVATE READING</div>
+
+      <h1>本鑑定書</h1>
+
+      <div class="cover-line"></div>
+
+      <p class="cover-subtitle">
+        言葉や態度の奥にある本音を視る
+      </p>
+    </header>
+
+    <article class="reading">
+
+      <p class="recipient">良子さん</p>
+
+      <p class="lead">
+        このたびは本鑑定へお進みいただき、ありがとうございます。
+      </p>
+
+      <p>
+        今回は、無料鑑定でお伝えした内容の中から、「この恋を進めるために、今どう動くべきか」というテーマを中心に、さらに深く波動を読み解かせていただきました。
+      </p>
+
+      <p>
+        最初に、今回の鑑定で一番強く伝わってきたことをお伝えします。
+      </p>
+
+      <p>
+        波動を深く視ていく中で、私が特に気になったのは、良子さんの中に「この恋を失いたくない」という想い以上の不安が重なっていることでした。
+      </p>
+
+      <p>
+        それは、「もう二度と、こんなふうに誰かを好きになれないかもしれない」という恐れとして表れているようにも感じます。
+      </p>
+
+      <p>
+        十年ぶりに心が動いた恋だからこそ、この恋には過去の恋愛以上の意味が生まれています。
+      </p>
+
+      <p class="rhythm">
+        <span>だから彼の一言が嬉しい。</span>
+        <span>だから少し反応が違うだけで不安になる。</span>
+        <span>名前を呼ばれた意味を何度も考えてしまう。</span>
+        <span>お肌を褒められた理由を思い返してしまう。</span>
+      </p>
+
+      <p>
+        本当は彼の気持ちだけを知りたいのではなく、この恋はまだ終わっていないと安心したい気持ちが、心の奥にあるように感じました。
+      </p>
+
+      <p>
+        今回の鑑定では、その心の揺れこそが、この恋を進めるうえで最初に整えるべき課題だと視えています。
+      </p>
+
+      <p>
+        だから私は、最初にはっきりお伝えします。
+      </p>
+
+      <p class="key-message">
+        今は、告白するタイミングではありません。
+      </p>
+
+      <p>
+        恋人がいるのかを確かめたり、答えを急いで求めたりする時期でもありません。
+      </p>
+
+      <p>
+        これは可能性がないからではありません。
+      </p>
+
+      <p>
+        まだ彼の中で、この恋が始まる準備が整っていないからです。
+      </p>
+
+      <div class="section-break"></div>
+
+      <p>
+        今回視えた彼の波動は、良子さんに対して警戒心はなく、自然に話せる存在として受け入れています。
+      </p>
+
+      <p class="rhythm">
+        <span>名前を呼ぶこと。</span>
+        <span>お肌を褒めること。</span>
+        <span>受付で自然に会話をすること。</span>
+        <span>インスタグラムをすぐにフォローし返したこと。</span>
+        <span>足に軽く触れるような距離感。</span>
+      </p>
+
+      <p>
+        これらを一つずつ見ると期待したくなる出来事です。
+      </p>
+
+      <p class="key-message">
+        ですが、ここを勘違いしてはいけません。
+      </p>
+
+      <p>
+        彼はヨガインストラクターです。
+      </p>
+
+      <p>
+        相手を安心させることも、親しみやすく接することも仕事の一部です。
+      </p>
+
+      <p>
+        だから今の段階では、「優しくしてくれる」ことより、「良子さん自身を知ろうとしているか」を見る必要があります。
+      </p>
+
+      <p>
+        男性は、感じのいい女性と、もっと知りたい女性を無意識のうちに分けています。
+      </p>
+
+      <p class="key-message">
+        恋愛感情は、優しさから始まるのではありません。<br>
+        興味から始まります。
+      </p>
+
+      <p>
+        その興味が生まれると、男性は自然と質問が増えます。
+      </p>
+
+      <p class="rhythm">
+        <span>以前話したことを覚えています。</span>
+        <span>ヨガとは関係のない話題を広げます。</span>
+        <span>そして、自分から接点を作ろうとします。</span>
+      </p>
+
+      <p>
+        ここが、先生としての優しさと、一人の女性への関心の境界線です。
+      </p>
+
+      <p>
+        だから今の良子さんに必要なのは、彼へ気持ちを伝えることではありません。
+      </p>
+
+      <p class="key-message">
+        彼が「もっと知りたい」と思える余白を作ることです。
+      </p>
+
+      <div class="section-break"></div>
+
+      <p>
+        まずはレッスン後に短い会話を続けてください。
+      </p>
+
+      <p>
+        毎回である必要はありません。
+      </p>
+
+      <p>
+        二回か三回に一度くらいで十分です。
+      </p>
+
+      <p>
+        レッスンの感想を伝えたあとに、彼自身へ一つだけ質問してみてください。
+      </p>
+
+      <p class="rhythm">
+        <span>以前キックボクシングの話をした時、驚いていましたよね。</span>
+        <span>そんなに意外でしたか。</span>
+        <span>先生はヨガ以外ではどんな運動が好きなんですか。</span>
+      </p>
+
+      <p>
+        そのくらいの自然さで構いません。
+      </p>
+
+      <p>
+        ここで見るべきなのは、自分がうまく話せたかではありません。
+      </p>
+
+      <p class="rhythm">
+        <span>彼が質問を返してくるか。</span>
+        <span>話を続けようとするか。</span>
+        <span>次に会った時、その話題を覚えているか。</span>
+        <span>彼から興味が返ってくるかどうか。</span>
+      </p>
+
+      <p>
+        そこが、この恋が動き始める合図になります。
+      </p>
+
+      <p>
+        逆に、今の良子さんが告白したくなる理由は、恋を進めたいからだけではありません。
+      </p>
+
+      <p class="rhythm">
+        <span>「白黒はっきりさせたい」</span>
+        <span>「安心したい」</span>
+      </p>
+
+      <p>
+        その気持ちが強くなっているからです。
+      </p>
+
+      <p>
+        でも、その行動は恋が選ぶものではなく、不安が選ぶものです。
+      </p>
+
+      <p>
+        不安から動いた恋は、相手の本心を見る前に、自分で終わらせてしまうことがあります。
+      </p>
+
+      <p class="key-message">
+        だから今回の鑑定では、「焦らないでください」ではなく、「今は答えを急がないでください」とお伝えします。
+      </p>
+
+      <div class="section-break"></div>
+
+      <p>
+        年齢差についても同じです。
+      </p>
+
+      <p>
+        良子さんが年上だから不利なのではありません。
+      </p>
+
+      <p>
+        年齢差を理由に、自分から恋愛対象ではない位置へ下がってしまうことが問題なのです。
+      </p>
+
+      <p class="rhythm">
+        <span>私は年上だから。</span>
+        <span>若い女性には勝てない。</span>
+      </p>
+
+      <p>
+        そう思った瞬間、その気持ちは言葉や態度になって彼へ伝わります。
+      </p>
+
+      <p>
+        でも今回視えた良子さんの魅力は、そこではありませんでした。
+      </p>
+
+      <p class="rhythm">
+        <span>自分の世界を持っていること。</span>
+        <span>十年ぶりに人を好きになれるほど素直な心を持っていること。</span>
+        <span>キックボクシングのように、新しいことへ挑戦できる行動力。</span>
+      </p>
+
+      <p>
+        その一つ一つが、大人の女性だからこそ持てる魅力として映っています。
+      </p>
+
+      <p class="key-message">
+        どうか、それを年齢という数字だけで消さないでください。
+      </p>
+
+      <p>
+        そして、今回の鑑定で最も大切だと感じたことがあります。
+      </p>
+
+      <p>
+        良子さんは今、彼を見ているようで、本当は彼の反応を通して自分の価値を確かめようとしてしまっています。
+      </p>
+
+      <p class="rhythm">
+        <span>彼が笑えば安心する。</span>
+        <span>反応が薄ければ自信を失う。</span>
+      </p>
+
+      <p>
+        それでは、恋愛の主導権は彼ではなく、不安に握られてしまいます。
+      </p>
+
+      <p>
+        この状態では、本来なら見えるはずの彼の気持ちまで見失ってしまいます。
+      </p>
+
+      <p>
+        だから今回お伝えした行動は、すべて「焦らず相手を見る」ためのものです。
+      </p>
+
+      <p>
+        実は、この「焦らず」が一番難しいのです。
+      </p>
+
+      <p>
+        十年ぶりに好きになった相手だからこそ、頭では分かっていても心は追いかけたくなります。
+      </p>
+
+      <p>
+        だから私は、良子さんには心を落ち着かせる支えを一つ持っておいてほしいと感じました。
+      </p>
+
+      <div class="section-break"></div>
+
+      <div class="bracelet-block">
+
+        <p class="key-message">
+          それが、今回おすすめしたいパワーストーンブレスレットです。
+        </p>
+
+        <p>
+          私は、このブレスレットが彼の気持ちを変えるとは考えていません。
+        </p>
+
+        <p>
+          身につければ恋が叶うとも思っていません。
+        </p>
+
+        <p>
+          ですが、今回の鑑定で視えた良子さんには、「彼を引き寄せること」よりも、「自分の軸を失わないこと」の方が、はるかに重要でした。
+        </p>
+
+        <p class="key-message">
+          良子さんが今回手に入れるべきなのは、彼の気持ちではありません。<br>
+          彼の反応に振り回されず、自分らしく笑っていられる心です。
+        </p>
+
+        <p>
+          その状態で初めて、この鑑定でお伝えした行動が意味を持ち、彼の本当の気持ちを落ち着いて受け止められるようになります。
+        </p>
+
+        <p>
+          だから私は、今回の良子さんには、このブレスレットをおすすめしたいと思いました。
+        </p>
+
+        <p class="rhythm">
+          <span>彼に会う前に気持ちが高ぶった時。</span>
+          <span>年齢差を理由に自分を否定しそうになった時。</span>
+          <span>答えを急いでしまいそうになった時。</span>
+        </p>
+
+        <p>
+          そのたびに、「私は焦らなくて大丈夫」「私は私のままで価値がある」と、自分へ戻るための合図として、このブレスレットはとても相性が良いと感じています。
+        </p>
+
+        <p>
+          恋は、好きという気持ちだけで育つものではありません。
+        </p>
+
+        <p>
+          自分を大切にできる心の余裕があって初めて、相手の本当の気持ちを受け止めることができます。
+        </p>
+
+        <p>
+          だから今回のブレスレットは、恋を叶えるためではなく、良子さん自身が、この恋を壊さないためのお守りとしておすすめしています。
+        </p>
+
+      </div>
+
+      <p class="cta">
+        詳しい組み合わせや、なぜ今の良子さんの波動に合うのかを知りたい場合は、「詳細希望」とメッセージしてください。<br><br>
+        今の良子さんに必要な意味も含めて、丁寧にお伝えいたします。
+      </p>
+
+      <div class="section-break"></div>
+
+      <p class="recipient">良子さん。</p>
+
+      <p>
+        今回の鑑定で視えた未来は、「叶う」「叶わない」と決まっているものではありませんでした。
+      </p>
+
+      <p>
+        けれど、一つだけ確信を持って言えることがあります。
+      </p>
+
+      <p class="key-message">
+        この恋の鍵を握っているのは、彼ではありません。
+      </p>
+
+      <p>
+        良子さんが、自分の価値を彼の反応に委ねず、自分らしく彼と向き合えるかどうかです。
+      </p>
+
+      <p>
+        その土台が整えば、この恋は初めて本当の意味で動き始めます。
+      </p>
+
+      <p class="key-message">
+        焦らなくて大丈夫です。
+      </p>
+
+      <p>
+        一歩ずつ彼を知り、一歩ずつ自分を信じてください。
+      </p>
+
+      <p>
+        その積み重ねが、良子さんの望む未来へ続く一番確かな道になると、今回の鑑定では強く感じました。
+      </p>
+
+      <p class="signature">ハヤト</p>
+
+    </article>
+
+    <footer class="page-footer">
+      HAYATO PRIVATE READING
+    </footer>
+
+  </main>
+</body>
+</html>
