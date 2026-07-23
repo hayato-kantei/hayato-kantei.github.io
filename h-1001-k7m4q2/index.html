@@ -25,8 +25,8 @@
       --text-main: #eeeae2;
       --text-soft: #cbc5ba;
       --text-muted: #928c82;
-      --border: rgba(201, 170, 106, 0.24);
-      --card: rgba(15, 18, 29, 0.82);
+      --border: rgba(201, 170, 106, 0.22);
+      --card: rgba(15, 18, 29, 0.84);
     }
 
     * {
@@ -104,7 +104,7 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.18;
+      opacity: 0.16;
       background-image:
         radial-gradient(
           circle,
@@ -136,12 +136,12 @@
       z-index: 1;
       width: min(100% - 32px, 780px);
       margin: 0 auto;
-      padding: 56px 0 80px;
+      padding: 50px 0 72px;
     }
 
     .cover {
-      padding: 52px 28px 46px;
-      margin-bottom: 24px;
+      padding: 50px 28px 44px;
+      margin-bottom: 22px;
       text-align: center;
       border: 1px solid var(--border);
       border-radius: 20px;
@@ -183,7 +183,7 @@
     .cover-line {
       width: 58px;
       height: 1px;
-      margin: 25px auto 20px;
+      margin: 24px auto 19px;
       background:
         linear-gradient(
           90deg,
@@ -202,7 +202,7 @@
     }
 
     .reading {
-      padding: 42px 42px 48px;
+      padding: 40px 42px 46px;
       border: 1px solid rgba(201, 170, 106, 0.18);
       border-radius: 20px;
       background: var(--card);
@@ -213,12 +213,12 @@
     }
 
     .reading p {
-      margin: 0 0 1em;
+      margin: 0 0 0.9em;
       color: var(--text-main);
       font-size: 16px;
       font-weight: 400;
-      line-height: 1.95;
-      letter-spacing: 0.025em;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
     }
 
     .reading p:last-child {
@@ -226,7 +226,7 @@
     }
 
     .recipient {
-      margin-bottom: 1.15em !important;
+      margin-bottom: 1.05em !important;
       color: var(--gold-light) !important;
       font-family:
         "Yu Mincho",
@@ -240,36 +240,53 @@
       color: #f4f0e8 !important;
     }
 
+    /*
+      最重要の結論だけに使用する帯
+    */
     .key-message {
-      margin: 1.45em 0 !important;
-      padding: 17px 19px;
-      color: #f5eee3 !important;
+      margin: 1.3em 0 !important;
+      padding: 14px 16px;
+      color: #f3ede3 !important;
       font-family:
         "Yu Mincho",
         "Hiragino Mincho ProN",
         serif;
-      font-size: 17px !important;
+      font-size: 16px !important;
       font-weight: 600 !important;
-      line-height: 1.9 !important;
+      line-height: 1.8 !important;
       border-left: 2px solid var(--gold);
       background:
         linear-gradient(
           90deg,
-          rgba(111, 23, 52, 0.27),
-          rgba(201, 170, 106, 0.045)
+          rgba(111, 23, 52, 0.22),
+          rgba(201, 170, 106, 0.035)
         );
     }
 
-    .rhythm {
+    /*
+      長めの重要文を控えめに見せる
+    */
+    .emphasis-line {
       margin: 1.15em 0 !important;
-      padding-left: 15px;
-      color: #e5ded2 !important;
+      padding: 2px 0 2px 15px;
+      color: #eee7db !important;
+      font-weight: 500 !important;
+      border-left: 1px solid rgba(201, 170, 106, 0.72);
+    }
+
+    /*
+      短い文章や確認項目をまとめる
+    */
+    .rhythm {
+      margin: 1.05em 0 !important;
+      padding: 2px 0 2px 15px;
+      color: #e2dcd1 !important;
       border-left: 1px solid rgba(201, 170, 106, 0.48);
     }
 
     .rhythm span {
       display: block;
-      margin-bottom: 0.28em;
+      margin-bottom: 0.24em;
     }
 
     .rhythm span:last-child {
@@ -277,30 +294,41 @@
     }
 
     .section-break {
-      width: 76px;
+      width: 72px;
       height: 1px;
-      margin: 31px auto;
+      margin: 28px auto;
       background:
         linear-gradient(
           90deg,
           transparent,
-          rgba(201, 170, 106, 0.65),
+          rgba(201, 170, 106, 0.58),
           transparent
         );
     }
 
     .bracelet-block {
-      margin: 1.6em 0;
-      padding: 24px 22px;
-      border: 1px solid rgba(201, 170, 106, 0.24);
+      margin: 1.45em 0;
+      padding: 22px 20px;
+      border: 1px solid rgba(201, 170, 106, 0.22);
       border-radius: 12px;
       background:
         radial-gradient(
           circle at top right,
-          rgba(111, 23, 52, 0.22),
+          rgba(111, 23, 52, 0.18),
           transparent 42%
         ),
-        rgba(255, 255, 255, 0.025);
+        rgba(255, 255, 255, 0.022);
+    }
+
+    .bracelet-title {
+      margin-bottom: 1em !important;
+      color: var(--gold-light) !important;
+      font-family:
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+      font-size: 17px !important;
+      font-weight: 600 !important;
     }
 
     .bracelet-block p:last-child {
@@ -308,22 +336,22 @@
     }
 
     .cta {
-      margin: 1.6em 0 !important;
-      padding: 19px 20px;
+      margin: 1.5em 0 !important;
+      padding: 18px 18px;
       color: #f2ece2 !important;
       text-align: center;
-      border: 1px solid rgba(201, 170, 106, 0.42);
+      border: 1px solid rgba(201, 170, 106, 0.36);
       border-radius: 10px;
       background:
         linear-gradient(
           135deg,
-          rgba(111, 23, 52, 0.38),
-          rgba(201, 170, 106, 0.08)
+          rgba(111, 23, 52, 0.28),
+          rgba(201, 170, 106, 0.06)
         );
     }
 
     .signature {
-      margin-top: 2em !important;
+      margin-top: 1.8em !important;
       color: var(--gold-light) !important;
       font-family:
         Georgia,
@@ -335,7 +363,7 @@
     }
 
     .page-footer {
-      padding-top: 28px;
+      padding-top: 26px;
       color: var(--text-muted);
       font-size: 11px;
       text-align: center;
@@ -349,11 +377,11 @@
 
       .page {
         width: min(100% - 22px, 780px);
-        padding: 22px 0 44px;
+        padding: 22px 0 42px;
       }
 
       .cover {
-        padding: 39px 18px 35px;
+        padding: 38px 18px 34px;
         margin-bottom: 14px;
         border-radius: 15px;
       }
@@ -368,15 +396,15 @@
       }
 
       .reading {
-        padding: 28px 20px 34px;
+        padding: 27px 20px 32px;
         border-radius: 15px;
       }
 
       .reading p {
-        margin-bottom: 0.9em;
+        margin-bottom: 0.82em;
         font-size: 15px;
-        line-height: 1.9;
-        letter-spacing: 0.015em;
+        line-height: 1.85;
+        letter-spacing: 0.01em;
       }
 
       .recipient {
@@ -384,23 +412,24 @@
       }
 
       .key-message {
-        margin: 1.3em 0 !important;
-        padding: 15px 15px;
-        font-size: 16px !important;
-        line-height: 1.85 !important;
+        margin: 1.15em 0 !important;
+        padding: 13px 14px;
+        font-size: 15.5px !important;
+        line-height: 1.75 !important;
       }
 
+      .emphasis-line,
       .rhythm {
         padding-left: 12px;
       }
 
       .section-break {
-        margin: 26px auto;
+        margin: 24px auto;
       }
 
       .bracelet-block {
-        margin: 1.35em 0;
-        padding: 19px 16px;
+        margin: 1.25em 0;
+        padding: 18px 15px;
       }
 
       .cta {
@@ -425,7 +454,8 @@
       }
 
       .cover,
-      .reading {
+      .reading,
+      .bracelet-block {
         color: #111;
         border: none;
         background: #fff;
@@ -435,9 +465,11 @@
       .reading p,
       .lead,
       .key-message,
+      .emphasis-line,
       .rhythm,
       .cta,
-      .signature {
+      .signature,
+      .bracelet-title {
         color: #111 !important;
       }
     }
@@ -540,7 +572,7 @@
         これらを一つずつ見ると期待したくなる出来事です。
       </p>
 
-      <p class="key-message">
+      <p class="emphasis-line">
         ですが、ここを勘違いしてはいけません。
       </p>
 
@@ -651,7 +683,7 @@
         不安から動いた恋は、相手の本心を見る前に、自分で終わらせてしまうことがあります。
       </p>
 
-      <p class="key-message">
+      <p class="emphasis-line">
         だから今回の鑑定では、「焦らないでください」ではなく、「今は答えを急がないでください」とお伝えします。
       </p>
 
@@ -692,7 +724,7 @@
         その一つ一つが、大人の女性だからこそ持てる魅力として映っています。
       </p>
 
-      <p class="key-message">
+      <p class="emphasis-line">
         どうか、それを年齢という数字だけで消さないでください。
       </p>
 
@@ -737,7 +769,7 @@
 
       <div class="bracelet-block">
 
-        <p class="key-message">
+        <p class="bracelet-title">
           それが、今回おすすめしたいパワーストーンブレスレットです。
         </p>
 
@@ -753,9 +785,8 @@
           ですが、今回の鑑定で視えた良子さんには、「彼を引き寄せること」よりも、「自分の軸を失わないこと」の方が、はるかに重要でした。
         </p>
 
-        <p class="key-message">
-          良子さんが今回手に入れるべきなのは、彼の気持ちではありません。<br>
-          彼の反応に振り回されず、自分らしく笑っていられる心です。
+        <p class="emphasis-line">
+          良子さんが今回手に入れるべきなのは、彼の気持ちではありません。彼の反応に振り回されず、自分らしく笑っていられる心です。
         </p>
 
         <p>
@@ -819,7 +850,7 @@
         その土台が整えば、この恋は初めて本当の意味で動き始めます。
       </p>
 
-      <p class="key-message">
+      <p class="emphasis-line">
         焦らなくて大丈夫です。
       </p>
 
